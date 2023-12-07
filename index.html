@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,6 @@
             font-family: Arial, sans-serif;
             background-color: #34495e;
             margin: 0;
-            padding: 100px;
             box-sizing: border-box;
         }
 
@@ -190,79 +190,89 @@
                 display: block;
             }
         }
+
+        @media (max-width: 400px) {
+            .notification {
+                max-width: 100%;
+                /* Make notifications full width on small screens */
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div id="content">
-    <div class="notification green">
-        <div class="info">
-            <h1>This is a <a href="https://goo.gl/GykQEn">notification</a></h1>
-            <p>You have been notified</p>
+    <div id="content">
+        <div class="notification green">
+            <div class="info">
+                <h1>This is a <a href="https://goo.gl/GykQEn">notification</a></h1>
+                <p>You have been notified</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-asterisk"></i>
+            </div>
         </div>
-        <div class="icon">
-            <i class="fa fa-asterisk"></i>
+
+        <div class="notification red">
+            <div class="info">
+                <h1><a href="https://goo.gl/IiwBDn">ruandre</a> followed you</h1>
+                <p>You have a new follower! Feel the fame flow through your veins!</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-heart"></i>
+            </div>
+        </div>
+
+        <div class="notification blue">
+            <div class="info">
+                <h1><a href="https://goo.gl/I8lNLu">Windows 10</a> preview is here</h1>
+                <p>Windows 10 represents the first step of a whole new generation of Windows. Windows 10 unlocks new
+                    experiences for customers to work, play and connect.</p>
+                <a href="https://goo.gl/Z83wbD" class="button">Full story</a><a href="#" class="button gray">Dismiss</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-newspaper-o"></i>
+            </div>
+        </div>
+
+        <div class="notification purple">
+            <div class="info">
+                <h1><a>8 min</a> to home with a bicycle</h1>
+                <p>Bicycle 2.4 km, 8 min. Use caution - may involve errors or sections not suited for bicycling</p>
+                <a href="https://goo.gl/YbvshI" class="button">Navigate</a><a href="#" class="button gray">Dismiss</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bicycle"></i>
+            </div>
+        </div>
+
+        <div class="notification blue">
+            <div class="info">
+                <h1><a href="https://goo.gl/C1PuL7">@munkkeli</a> followed you!</h1>
+                <p>You have a new follower! Feel the fame flow through your veins!</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-twitter"></i>
+            </div>
         </div>
     </div>
 
-    <div class="notification red">
-        <div class="info">
-            <h1><a href="https://goo.gl/IiwBDn">ruandre</a> followed you</h1>
-            <p>You have a new follower! Feel the fame flow through your veins!</p>
+    <!-- This is for the preview at codepen.io :) -->
+    <div id="preview">
+        <div class="notification purple">
+            <div class="info">
+                <h1><a>8 min</a> to home with a bicycle</h1>
+                <p>Bicycle 2.4 km, 8 min. Use caution - may involve errors or sections not suited for bicycling</p>
+                <a href="https://goo.gl/YbvshI" class="button">Navigate</a><a href="#" class="button gray">Dismiss</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-bicycle"></i>
+            </div>
         </div>
-        <div class="icon">
-            <i class="fa fa-heart"></i>
-        </div>
-    </div>
 
-    <div class="notification blue">
-        <div class="info">
-            <h1><a href="https://goo.gl/I8lNLu">Windows 10</a> preview is here</h1>
-            <p>Windows 10 represents the first step of a whole new generation of Windows. Windows 10 unlocks new experiences for customers to work, play and connect.</p>
-            <a href="https://goo.gl/Z83wbD" class="button">Full story</a><a href="#" class="button gray">Dismiss</a>
-        </div>
-        <div class="icon">
-            <i class="fa fa-newspaper-o"></i>
-        </div>
+        <p id="text">Make your view height larger to see the full thing ;)</p>
     </div>
-
-    <div class="notification purple">
-        <div class="info">
-            <h1><a>8 min</a> to home with a bicycle</h1>
-            <p>Bicycle 2.4 km, 8 min. Use caution - may involve errors or sections not suited for bicycling</p>
-            <a href="https://goo.gl/YbvshI" class="button">Navigate</a><a href="#" class="button gray">Dismiss</a>
-        </div>
-        <div class="icon">
-            <i class="fa fa-bicycle"></i>
-        </div>
-    </div>
-
-    <div class="notification blue">
-        <div class="info">
-            <h1><a href="https://goo.gl/C1PuL7">@munkkeli</a> followed you!</h1>
-            <p>You have a new follower! Feel the fame flow through your veins!</p>
-        </div>
-        <div class="icon">
-            <i class="fa fa-twitter"></i>
-        </div>
-    </div>
-</div>
-
-<!-- This is for the preview at codepen.io :) -->
-<div id="preview">
-    <div class="notification purple">
-        <div class="info">
-            <h1><a>8 min</a> to home with a bicycle</h1>
-            <p>Bicycle 2.4 km, 8 min. Use caution - may involve errors or sections not suited for bicycling</p>
-            <a href="https://goo.gl/YbvshI" class="button">Navigate</a><a href="#" class="button gray">Dismiss</a>
-        </div>
-        <div class="icon">
-            <i class="fa fa-bicycle"></i>
-        </div>
-    </div>
-
-    <p id="text">Make your view height larger to see the full thing ;)</p>
-</div>
 
 </body>
+
 </html>
