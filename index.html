@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add any additional head elements if needed -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #34495e;
+            margin: 0;
+            padding: 100px;
+            box-sizing: border-box;
+        }
+
+        #content {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .notification {
+            display: flex;
+            margin: 0 auto 10px auto;
+            width: 350px;
+            min-height: 70px;
+        }
+
+        .notification .info {
+            flex: 1;
+            padding: 10px 10px 0 10px;
+            background: #ecf0f1;
+            border-radius: 3px 0 0 3px;
+            border-bottom: 3px solid darken(#ecf0f1, 15%);
+        }
+
+        .notification h1 {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #111;
+        }
+
+        .notification h1 a {
+            text-decoration: none;
+            color: #444;
+        }
+
+        .notification p {
+            margin: 0;
+            padding: 5px 0;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .notification .button {
+            display: inline-block;
+            margin: 3px 3px 5px 0;
+            padding: 3px 7px;
+            border-radius: 2px;
+            border-bottom: 1px solid;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ecf0f1;
+        }
+
+        .notification .button.blue {
+            background: #2980b9;
+            border-bottom-color: darken(#2980b9, 10%);
+        }
+
+        .notification .button.red {
+            background: #e74c3c;
+            border-bottom-color: darken(#e74c3c, 10%);
+        }
+
+        .notification .button.orange {
+            background: #f39c12;
+            border-bottom-color: darken(#f39c12, 10%);
+        }
+
+        .notification .button.purple {
+            background: #9b59b6;
+            border-bottom-color: darken(#9b59b6, 10%);
+        }
+
+        .notification .button.green {
+            background: #27ae60;
+            border-bottom-color: darken(#27ae60, 10%);
+        }
+
+        .notification .button.gray {
+            background: #95a5a6;
+            border-bottom-color: darken(#95a5a6, 10%);
+        }
+
+        .notification .icon {
+            padding: 15px 0 0 0;
+            width: 70px;
+            border-radius: 0 3px 3px 0;
+            text-align: center;
+            font-size: 32px;
+            color: #ecf0f1;
+            border-bottom: 3px solid;
+        }
+
+        .notification.blue {
+            background: #2980b9;
+        }
+
+        .notification.red {
+            background: #e74c3c;
+        }
+
+        .notification.orange {
+            background: #f39c12;
+        }
+
+        .notification.purple {
+            background: #9b59b6;
+        }
+
+        .notification.green {
+            background: #27ae60;
+        }
+
+        .notification.gray {
+            background: #95a5a6;
+        }
+
+        .notification .icon.blue {
+            background: #2980b9;
+            border-bottom-color: darken(#2980b9, 10%);
+        }
+
+        .notification .icon.red {
+            background: #e74c3c;
+            border-bottom-color: darken(#e74c3c, 10%);
+        }
+
+        .notification .icon.orange {
+            background: #f39c12;
+            border-bottom-color: darken(#f39c12, 10%);
+        }
+
+        .notification .icon.purple {
+            background: #9b59b6;
+            border-bottom-color: darken(#9b59b6, 10%);
+        }
+
+        .notification .icon.green {
+            background: #27ae60;
+            border-bottom-color: darken(#27ae60, 10%);
+        }
+
+        .notification .icon.gray {
+            background: #95a5a6;
+            border-bottom-color: darken(#95a5a6, 10%);
+        }
+
+        #preview {
+            display: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #preview #text {
+            text-align: center;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        @media (max-height: 400px) {
+            #content {
+                display: none;
+            }
+
+            #preview {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <div class="notification green">
+        <div class="info">
+            <h1>This is a <a href="https://goo.gl/GykQEn">notification</a></h1>
+            <p>You have been notified</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-asterisk"></i>
+        </div>
+    </div>
+
+    <div class="notification red">
+        <div class="info">
+            <h1><a href="https://goo.gl/IiwBDn">ruandre</a> followed you</h1>
+            <p>You have a new follower! Feel the fame flow through your veins!</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-heart"></i>
+        </div>
+    </div>
+
+    <div class="notification blue">
+        <div class="info">
+            <h1><a href="https://goo.gl/I8lNLu">Windows 10</a> preview is here</h1>
+            <p>Windows 10 represents the first step of a whole new generation of Windows. Windows 10 unlocks new experiences for customers to work, play and connect.</p>
+            <a href="https://goo.gl/Z83wbD" class="button">Full story</a><a href="#" class="button gray">Dismiss</a>
+        </div>
+        <div class="icon">
+            <i class="fa fa-newspaper-o"></i>
+        </div>
+    </div>
+
+    <div class="notification purple">
+        <div class="info">
+            <h1><a>8 min</a> to home with a bicycle</h1>
+            <p>Bicycle 2.4 km, 8 min. Use caution - may involve errors or sections not suited for bicycling</p>
+            <a href="https://goo.gl/YbvshI" class="button">Navigate</a><a href="#" class="button gray">Dismiss</a>
+        </div>
+        <div class="icon">
+            <i class="fa fa-bicycle"></i>
+        </div>
+    </div>
+
+    <div class="notification blue">
+        <div class="info">
+            <h1><a href="https://goo.gl/C1PuL7">@munkkeli</a> followed you!</h1>
+            <p>You have a new follower! Feel the fame flow through your veins!</p>
+        </div>
+        <div class="icon">
+            <i class="fa fa-twitter"></i>
+        </div>
+    </div>
+</div>
+
+<!-- This is for the preview at codepen.io :) -->
+<div id="preview">
+    <div class="notification purple">
+        <div class="info">
+            <h1><a>8 min</a> to home with a bicycle</h1>
+            <p>Bicycle 2.4 km, 8 min. Use caution - may involve errors or sections not suited for bicycling</p>
+            <a href="https://goo.gl/YbvshI" class="button">Navigate</a><a href="#" class="button gray">Dismiss</a>
+        </div>
+        <div class="icon">
+            <i class="fa fa-bicycle"></i>
+        </div>
+    </div>
+
+    <p id="text">Make your view height larger to see the full thing ;)</p>
+</div>
+
+</body>
+</html>
