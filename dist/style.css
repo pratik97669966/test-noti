@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -10,9 +12,7 @@
   background: none;
 }
 
-body, html {
-  height: 100vh;
-}
+
 
 body {
   display: flex;
@@ -30,7 +30,9 @@ body {
     align-content: center;
   }
 }
-.before, .after {
+
+.before,
+.after {
   will-change: opacity;
   display: block;
   position: absolute;
@@ -54,10 +56,12 @@ main {
   opacity: 0;
   will-change: opacity;
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   padding: 8px;
 }
-main .before, main .after {
+
+main .before,
+main .after {
   position: fixed;
 }
 
@@ -67,46 +71,58 @@ ul {
   perspective: 800px;
   margin-bottom: 16px;
 }
+
 ul li {
   position: relative;
   padding: 8px;
 }
+
 ul li:not(:first-child) {
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
 }
-ul li:not(:first-child) .notification .before, ul li:not(:first-child) .notification .after {
+
+ul li:not(:first-child) .notification .before,
+ul li:not(:first-child) .notification .after {
   filter: blur(16px);
 }
+
 ul li:nth-child(1) {
   z-index: 3;
 }
+
 ul li:nth-child(1) .notification {
   background-color: rgba(255, 255, 255, 0.7);
 }
-ul li:nth-child(1) .notification .before, ul li:nth-child(1) .notification .after {
+
+ul li:nth-child(1) .notification .before,
+ul li:nth-child(1) .notification .after {
   filter: saturate(130%) blur(16px);
 }
+
 ul li:nth-child(2) {
   transform: translateY(16px) translateZ(-64px);
   z-index: 2;
 }
+
 ul li:nth-child(2) .notification {
   background-color: rgba(255, 255, 255, 0.6);
 }
+
 ul li:nth-child(3) {
   transform: translateY(32px) translateZ(-128px);
   z-index: 1;
 }
+
 ul li:nth-child(3) .notification {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 .container {
   -webkit-clip-path: inset(0 0 0 0 round 16px 16px 16px 16px);
-          clip-path: inset(0 0 0 0 round 16px 16px 16px 16px);
+  clip-path: inset(0 0 0 0 round 16px 16px 16px 16px);
 }
 
 .notification {
@@ -118,37 +134,49 @@ ul li:nth-child(3) .notification {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
 }
-.notification header, .notification .more {
+
+.notification header,
+.notification .more {
   opacity: 0.75;
 }
+
 .notification header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 8px;
   font-size: 12px;
 }
+
 .notification header h2 {
   text-transform: uppercase;
 }
+
 .notification header .timestamp {
   text-transform: lowercase;
 }
+
 .notification .content span {
   display: block;
   line-height: 1.4;
 }
+
 .notification .content .message {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.notification .content .sender, .notification .content .event {
+
+.notification .content .sender,
+.notification .content .event {
   font-weight: 600;
 }
+
 .notification .content .more {
   margin-top: 4px;
   font-size: 12px;
 }
-.notification .before, .notification .after {
+
+.notification .before,
+.notification .after {
   left: calc(50% - 50vw);
 }
